@@ -1,8 +1,15 @@
+
+
 header {
     display: flex;
     justify-content:space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    position: ;
+    background-color: #fff;
+    top: 0;
+    z-index: 1;
 }
 
 body {
@@ -64,10 +71,10 @@ button {
     opacity: 0.8;
 }
 
-.about__images  {
+/* .about__images  {
     display: flex;
     
-}
+} */
 
 .about button {
     font-size: 18px;
@@ -85,6 +92,9 @@ button {
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s linear infinite;
+    animation: ;
+    position: absolute;
 }
 
 .about__image {
@@ -166,6 +176,7 @@ button {
     transition: background-color 0.3s ease-in;
   }
   
+/* footer  */
 
   footer {
 
@@ -207,3 +218,108 @@ footer h3 {
 .footer__links a {
     margin-bottom: 15px;
 }
+
+/* анимации */
+
+
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* телефон */
+
+@media (max-width: 720px) {
+    header {
+        padding: 10px;
+
+    }
+
+    .header__logo {
+        height: 20px;
+    }
+
+    .about h1, .form h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about {
+        padding: 50px 10px;
+        flex-direction: column-reverse;
+    }
+
+    .form {
+        padding: 50px 10px;
+    }
+
+    footer {
+        padding: 50px 10px;        
+    }
+
+    footer .footer__container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;        
+    }
+    
+    .about__image {
+        width: 280px;
+    }
+}
+
+
+/* планшет */
+    
+@media (max-width: 1024px) {
+
+    .about {
+        padding: 115px 20px;        
+    }
+
+    .form {
+        padding: 115px 20px; 
+    }
+
+
+
+    footer {
+        padding: 90px 20px;
+    }
+
+
+    .about h1, .form h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;        
+    }
+    
+    .about__image {
+        width: 280px;
+    }
+
+
+
+
+
+
+
+}
+
